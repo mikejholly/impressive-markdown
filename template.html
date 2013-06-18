@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>{{ title }}</title>
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div id="impress">
+
+  {{ slides }}
+
+</div>
+
+<script src="lib/jquery.min.js"></script>
+<script src="lib/impress.js"></script>
+<script>
+$(function() {
+  $('.step').each(function(i) {
+    $(this)
+      .attr('data-x', 0)
+      .attr('data-y', i * -2000)
+      .attr('data-z', i * 2000)
+      .attr('data-rotate', Math.sin(i) / 2 * Math.PI * 100);
+  });
+  impress().init();
+  setInterval(function() {
+    $('.active').next().show();
+  }, 200);
+});
+</script>
+
+</body>
+</html>

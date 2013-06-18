@@ -1,0 +1,1 @@
+argv = require 'optimist'
