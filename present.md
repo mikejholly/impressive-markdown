@@ -24,11 +24,11 @@ current mobile offering is a little stale
 
 ~
 
-new version - total rewrite of frontend
+total rewrite of frontend
 
 ~
 
-thick client - faster and more stable for users
+thick client: faster and more stable for users
 
 ~
 
@@ -101,4 +101,8 @@ expose engagement patterns and growth
 ~
 
 connect promotion activity to real dollars
+
+~
+
+integrated posting of ads and message
 
