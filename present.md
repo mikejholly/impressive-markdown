@@ -1,8 +1,6 @@
 ~
 
-## roadmap
-
-~
+![Strutta](http://i.imgur.com/mTO9NTP.jpg)
 
 what we're working on
 
@@ -28,7 +26,7 @@ total rewrite of frontend
 
 ~
 
-thick client: faster and more stable for users
+thick client 
 
 ~
 
@@ -52,7 +50,7 @@ good response so far from instagram prototype
 
 ~
 
-add support for new trendy networks
+add support for trending networks
 
 ~
 
@@ -72,7 +70,7 @@ scaling backend to support 10x business
 
 ~
 
-enhanched infrastructure and tools
+enhanched infrastructure & tools
 
 ~
 
@@ -92,11 +90,11 @@ build database of rich user data
 
 ~
 
-bring the participant front and center
+bring the participant front & center
 
 ~
 
-expose engagement patterns and growth
+expose engagement patterns & growth
 
 ~
 
@@ -104,5 +102,5 @@ connect promotion activity to real dollars
 
 ~
 
-integrated posting of ads and message
+integrated posting of ads & message
 
