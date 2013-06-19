@@ -1,4 +1,3 @@
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,7 +24,6 @@ small, li {
     color: #aaa;
 }
 
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
@@ -50,34 +48,21 @@ table {
     border-spacing: 0;
 }
 
-/*
-    Now here is when interesting things start to appear.
-
-    We set up <body> styles with default font and nice gradient in the background.
-    And yes, there is a lot of repetition there because of -prefixes but we don't
-    want to leave anybody behind.
-*/
 body {
     font-family: 'PT Sans', sans-serif;
     color: #efefef;
     text-shadow: 2px 2px 0px black;
     min-height: 740px;
-
     background: -webkit-radial-gradient(#333, #111);
 }
 img {
     box-shadow: 0 0 20px black;
+    margin: 30px;
 }
 
-/*
-    Now let's bring some text styles back ...
-*/
 b, strong { font-weight: bold }
 i, em { font-style: italic }
 
-/*
-    ... and give links a nice look.
-*/
 a {
     color: inherit;
     text-decoration: none;
@@ -99,26 +84,6 @@ a:focus {
     text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
 }
 
-/*
-    Because the main point behind the impress.js demo is to demo impress.js
-    we display a fallback message for users with browsers that don't support
-    all the features required by it.
-
-    All of the content will be still fully accessible for them, but I want
-    them to know that they are missing something - that's what the demo is
-    about, isn't it?
-
-    And then we hide the message, when support is detected in the browser.
-*/
-
-
-
-/*
-    Now let's style the presentation steps.
-
-    We start with basics to make sure it displays correctly in everywhere ...
-*/
-
 .step {
     position: relative;
     width: 900px;
@@ -137,16 +102,11 @@ a:focus {
     text-align: center;
 }
 
-.title {
+h2 {
     font-size: 100px;
     color: #dfdc00;
 }
 
-/*
-    ... and we enhance the styles for impress.js.
-
-    Basically we remove the margin and make inactive steps a little bit transparent.
-*/
 .impress-enabled .step {
     margin: 0;
     opacity: 0.3;

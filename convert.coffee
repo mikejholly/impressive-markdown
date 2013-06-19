@@ -9,12 +9,12 @@ read   = (input) ->
   fs.readFileSync input, 'utf-8'
 write  = fs.writeFileSync
 
-# Object passed to template function
-context = {}
-
 # File to process and presention title
 markdownFile  = process.argv.pop()
-context.title = process.argv.pop()
+
+# Object passed to template function
+context =
+  title: process.argv.pop()
 
 # Bust if input file is not found
 unless exists markdownFile
@@ -25,8 +25,8 @@ unless exists markdownFile
 template = read './template.html'
 input    = read markdownFile
 
-# Split each subsection by each occurrance of '---'
-parts = input.split /---/
+# Split each subsection by each occurrance of '~'
+parts = input.split '~'
 
 # Ignore blank lines
 parts = _.reject parts, (p) ->
