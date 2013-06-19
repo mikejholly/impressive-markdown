@@ -5,8 +5,7 @@ markdown = require('markdown').markdown
 
 # Convenience renames
 exists = fs.existsSync
-read   = (input) ->
-  fs.readFileSync input, 'utf-8'
+read   = (input) -> fs.readFileSync input, 'utf-8'
 write  = fs.writeFileSync
 
 # File to process and presention title
