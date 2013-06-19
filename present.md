@@ -52,11 +52,15 @@ good response so far from instagram prototype
 
 ~
 
-add support for new social networks as they trend: vine, socialcam, etc.
+add support for new trendy networks
 
 ~
 
-backend stays the same - pull entries from multiple services
+backend stays the same
+
+~
+
+pull entries from multiple services
 
 ~
 
@@ -64,7 +68,11 @@ backend stays the same - pull entries from multiple services
 
 ~
 
-scaling backend to support 10x business in 1 year
+scaling backend to support 10x business
+
+~
+
+enhanched infrastructure and tools
 
 ~
 
@@ -84,11 +92,11 @@ build database of rich user data
 
 ~
 
-bring the participant (end user) front and center
+bring the participant front and center
 
 ~
 
-expose engagement patterns based on demographics
+expose engagement patterns and growth
 
 ~
 
