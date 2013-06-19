@@ -1,5 +1,3 @@
----
-
 ## Example info
 
 This is a thing.
@@ -15,3 +13,7 @@ Here's some more text.
 * of things
 
 ---
+
+### A larger heading plus
+
+__italics!!__

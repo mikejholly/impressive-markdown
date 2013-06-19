@@ -3,17 +3,36 @@ fs       = require 'fs'
 _        = require 'underscore'
 markdown = require('markdown').markdown
 
-md    = process.argv.pop()
-title = process.argv.pop()
+# Convenience renames
+exists = fs.existsSync
+read   = (input) ->
+  fs.readFileSync input, 'utf-8'
+write  = fs.writeFileSync
 
-unless fs.existsSync md
-  console.log "Can't find `#{md}`."
+# Object passed to template function
+context = {}
+
+# File to process and presention title
+markdownFile  = process.argv.pop()
+context.title = process.argv.pop()
+
+# Bust if input file is not found
+unless exists markdownFile
+  console.log "Can't find `#{markdownFile}`."
   process.exit()
 
-template = fs.readFileSync './template.html', 'utf-8'
-input    = fs.readFileSync md, 'utf-8'
+# Load template and markdown file
+template = read './template.html'
+input    = read markdownFile
 
+# Split each subsection by each occurrance of '---'
 parts = input.split /---/
+
+# Ignore blank lines
+parts = _.reject parts, (p) ->
+  p.length < 1
+
+# Format each section. Convert MD to HTML
 parts = _.map parts, (p) ->
   """
   <div class="step">
@@ -21,10 +40,11 @@ parts = _.map parts, (p) ->
   </div>
   """
 
-parts = _.reject parts
-slides = parts.join("\n")
+# Recombine sections
+context.slides = parts.join "\n"
 
-template = template.replace '{{ title }}', title
-template = template.replace '{{ slides }}', slides
+# Generate final HTML with underscore template
+result = _.template template, context
 
-fs.writeFile 'present.html', template
+# Save final template
+write 'present.html', result
