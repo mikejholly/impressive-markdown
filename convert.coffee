@@ -9,11 +9,11 @@ read   = (input) -> fs.readFileSync input, 'utf-8'
 write  = fs.writeFileSync
 
 # File to process and presention title
-markdownFile  = process.argv.pop()
+markdownFile = process.argv.pop()
 
 # Object passed to template function
 context =
-  title: process.argv.pop()
+  title: 'Presentation'
 
 # Bust if input file is not found
 unless exists markdownFile
@@ -46,4 +46,4 @@ context.slides = parts.join "\n"
 result = _.template template, context
 
 # Save final template
-write 'present.html', result
+write markdownFile.replace(/\.md$/, '.html'), result
