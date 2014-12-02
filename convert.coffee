@@ -9,7 +9,7 @@ puts   = console.log
 read   = (input) -> fs.readFileSync input, 'utf-8'
 
 # File to process and presention title
-markdownFile = process.argv.pop()
+markdownFile = process.argv[2];
 
 # Object passed to template function
 context =
@@ -17,7 +17,7 @@ context =
 
 # Bust if input file is not found
 unless exists markdownFile
-  console.log "Can't find `#{markdownFile}`."
+  console.log "Markdown file not specified"
   process.exit()
 
 # Load template and markdown file

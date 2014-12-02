@@ -9,10 +9,12 @@
     "underscore": "~1.4.4"
   },
   "devDependencies": {},
-  "bin": "./bin/impressivemd",
+  "bin": {
+    "impressivemd": "./bin/impressivemd"
+  },
   "scripts": {
-    "prepublish": "coffee -p -c convert.coffee  > ./bin/impressivemd",
-    "build": "coffee -p -c convert.coffee  > ./bin/impressivemd",
+    "prepublish": "make build",
+    "build": "make build"
   },
   "repository": {
     "type": "git",
