@@ -1,0 +1,27 @@
+{
+  "name": "impressive-markdown",
+  "version": "0.0.1",
+  "description": "Generate Impress.js presentations using a simple Markdown syntax",
+  "main": "index.js",
+  "dependencies": {
+    "markdown": "~0.4.0",
+    "optimist": "~0.5.2",
+    "underscore": "~1.4.4"
+  },
+  "devDependencies": {},
+  "bin": "./bin/impressivemd",
+  "scripts": {
+    "prepublish": "coffee -p -c convert.coffee  > ./bin/impressivemd",
+    "build": "coffee -p -c convert.coffee  > ./bin/impressivemd",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikejholly/impressive-markdown.git"
+  },
+  "author": "Mike Holly <mikejholly@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikejholly/impressive-markdown/issues"
+  },
+  "homepage": "https://github.com/mikejholly/impressive-markdown"
+}

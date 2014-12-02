@@ -5,8 +5,8 @@ markdown = require('markdown').markdown
 
 # Convenience renames
 exists = fs.existsSync
+puts   = console.log
 read   = (input) -> fs.readFileSync input, 'utf-8'
-write  = fs.writeFileSync
 
 # File to process and presention title
 markdownFile = process.argv.pop()
@@ -28,8 +28,7 @@ input    = read markdownFile
 parts = input.split '~'
 
 # Ignore blank lines
-parts = _.reject parts, (p) ->
-  p.length < 1
+parts = _.reject parts, (p) -> p.length < 1
 
 # Format each section. Convert MD to HTML
 parts = _.map parts, (p) ->
@@ -43,7 +42,4 @@ parts = _.map parts, (p) ->
 context.slides = parts.join "\n"
 
 # Generate final HTML with underscore template
-result = _.template template, context
-
-# Save final template
-write markdownFile.replace(/\.md$/, '.html'), result
+puts _.template template, context
